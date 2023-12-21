@@ -13,6 +13,9 @@ def main():
     print(stdout.decode("utf-8"), end="")
     print(stderr.decode("utf-8"), file=sys.stderr, end="")
 
+    code = process.wait()
+    sys.exit(code)
+
 
 if __name__ == "__main__":
     main()
