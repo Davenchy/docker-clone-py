@@ -1,8 +1,12 @@
 import subprocess
 import tempfile
 import shutil
+import ctypes
 import sys
 import os
+
+
+CLONE_NEWPID = 0x20000000
 
 
 def run(command, *args):
@@ -12,6 +16,9 @@ def run(command, *args):
 
     shutil.copy2(command, tempRootPath)
     os.chroot(tempRootPath)
+
+    libc = ctypes.CDLL(None)
+    libc.unshare(CLONE_NEWPID)
 
     process = subprocess.Popen(
         [commandPath, *args], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
