@@ -1,5 +1,9 @@
 [![progress-banner](https://backend.codecrafters.io/progress/docker/ad500496-6a1a-46d0-8e38-623fc9cba0c9)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
 
+Hello there, this is a challenge in which I try to create my own docker clone in python 😅
+
+> !TODO: Update the readme later
+
 This is a starting point for Python solutions to the
 ["Build Your Own Docker" Challenge](https://codecrafters.io/challenges/docker).
 
